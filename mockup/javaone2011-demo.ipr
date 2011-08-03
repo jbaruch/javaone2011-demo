@@ -1,8 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
-  <component name="AntConfiguration">
-    <defaultAnt bundledAnt="true" />
-  </component>
   <component name="ArtifactManager">
     <artifact type="exploded-war" name="javaone2011-demo:war exploded">
       <output-path>$PROJECT_DIR$/out/artifacts/javaone2011_demo_war_exploded</output-path>
@@ -11,17 +8,6 @@
         <element id="directory" name="WEB-INF">
           <element id="directory" name="classes">
             <element id="module-output" name="javaone2011-demo" />
-          </element>
-        </element>
-      </root>
-    </artifact>
-    <artifact type="exploded-war" name="mockup:war exploded">
-      <output-path>$PROJECT_DIR$/out/artifacts/mockup_war_exploded</output-path>
-      <root id="root">
-        <element id="javaee-facet-resources" facet="mockup/web/Web" />
-        <element id="directory" name="WEB-INF">
-          <element id="directory" name="classes">
-            <element id="module-output" name="mockup" />
           </element>
         </element>
       </root>
@@ -68,20 +54,6 @@
     <option name="SKIP_IMPORT_STATEMENTS" value="false" />
   </component>
   <component name="Encoding" useUTFGuessing="true" native2AsciiForPropertiesFiles="false" />
-  <component name="FacetAutodetectingManager">
-    <autodetection-disabled>
-      <facet-type id="web">
-        <modules>
-          <module name="javaone2011-demo">
-            <files>
-              <file url="file://$PROJECT_DIR$/mockup/web/WEB-INF/web.xml" />
-              <file url="file://$PROJECT_DIR$/web/WEB-INF/web.xml" />
-            </files>
-          </module>
-        </modules>
-      </facet-type>
-    </autodetection-disabled>
-  </component>
   <component name="GradleUISettings2">
     <setting name="root" />
   </component>
@@ -231,7 +203,7 @@
   </component>
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/mockup/mockup.iml" filepath="$PROJECT_DIR$/mockup/mockup.iml" />
+      <module fileurl="file://$PROJECT_DIR$/javaone2011-demo.iml" filepath="$PROJECT_DIR$/javaone2011-demo.iml" />
     </modules>
   </component>
   <component name="ProjectResources">
@@ -252,8 +224,50 @@
     <option name="UNLOCK_ON_CHECKIN" value="false" />
   </component>
   <component name="VcsDirectoryMappings">
-    <mapping directory="" vcs="Git" />
+    <mapping directory="" vcs="" />
   </component>
   <component name="WebServicesPlugin" addRequiredLibraries="true" />
+  <component name="masterDetails">
+    <states>
+      <state key="ArtifactsStructureConfigurable.UI">
+        <settings>
+          <artifact-editor />
+          <splitter-proportions />
+        </settings>
+      </state>
+      <state key="FacetStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions />
+        </settings>
+      </state>
+      <state key="GlobalLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions />
+        </settings>
+      </state>
+      <state key="ModuleStructureConfigurable.UI">
+        <settings>
+          <splitter-proportions />
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.6</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectLibrariesConfigurable.UI">
+        <settings>
+          <splitter-proportions />
+        </settings>
+      </state>
+    </states>
+  </component>
 </project>
 

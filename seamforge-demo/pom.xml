@@ -6,6 +6,17 @@
   <artifactId>seamforge-demo</artifactId>
   <version>1.0.0-SNAPSHOT</version>
   <packaging>war</packaging>
+  <dependencyManagement>
+    <dependencies>
+      <dependency>
+        <groupId>org.richfaces</groupId>
+        <artifactId>richfaces-bom</artifactId>
+        <version>4.0.0.Final</version>
+        <type>pom</type>
+        <scope>import</scope>
+      </dependency>
+    </dependencies>
+  </dependencyManagement>
   <dependencies>
     <dependency>
       <groupId>org.jboss.spec</groupId>
@@ -29,6 +40,16 @@
       <artifactId>hibernate-entitymanager</artifactId>
       <version>3.6.6.Final</version>
       <scope>provided</scope>
+    </dependency>
+    <dependency>
+      <groupId>org.richfaces.ui</groupId>
+      <artifactId>richfaces-components-ui</artifactId>
+      <version>4.0.0.Final</version>
+    </dependency>
+    <dependency>
+      <groupId>org.richfaces.core</groupId>
+      <artifactId>richfaces-core-impl</artifactId>
+      <version>4.0.0.Final</version>
     </dependency>
   </dependencies>
   <repositories>

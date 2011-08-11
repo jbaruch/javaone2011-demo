@@ -6,6 +6,12 @@
                 "title" : "String",
                 "track" : "String",
                 "category" : "String",
+                "speaker" : {
+                    "firstName" : "String",
+                    "lastName" : "String",
+                    "email" : "String",
+                    "talks" : "Talk[]"
+                },
                 "feedback" : [
                     {
                         "author" : "String",

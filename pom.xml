@@ -9,6 +9,7 @@
   <modules>
   <module>mockup</module>
   <module>seamforge-demo</module>
+      <module>roo-demo</module>
   </modules>
   <build>
     <plugins>

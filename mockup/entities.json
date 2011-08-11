@@ -1,0 +1,25 @@
+{
+    "conference" : [
+        {
+            "talk" : {
+                "code" : "long",
+                "title" : "String",
+                "track" : "String",
+                "category" : "String",
+                "feedback" : [
+                    {
+                        "author" : "String",
+                        "content" : "Rating",
+                        "skills" : "Rating",
+                        "demos" : "Rating",
+                        "explanation" : "Rating",
+                        "depth" : "Rating",
+                        "overall" : "Rating",
+                        "comments" : "String"
+                    }
+                ]
+
+            }
+        }
+    ]
+}

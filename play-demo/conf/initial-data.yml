@@ -1,0 +1,23 @@
+Speaker(AllanGregersen):
+  firstName: Allan
+  lastName: Gregersen
+  email: alleng@gmail.com
+
+Speaker(AlekseyShipilev):
+  firstName: Aleksey
+  lastName: Shipilev
+  email: alekseys@gmail.com
+
+Talk(24061):
+  code: 24061
+  title: Who Said Runtime Class Reloading Is Hard in Java?
+  track: Core Java Platform
+  category: Best Practices
+  speaker: AllanGregersen
+
+Talk(24062):
+  code: 24062
+  title: (The Art of) (Java) Benchmarking
+  track: Core Java Platform
+  category: Best Practices
+  speaker: AlekseyShipilev

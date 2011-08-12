@@ -1,0 +1,103 @@
+#{extends 'main.html' /}
+#{set title:'Feedback' /}
+
+<div id="templateContent">
+
+    <h1>Feedback Form: ${talk.title}</h1>
+
+    <h2>Speaker: ${talk.speaker}</h2>
+
+    <div>
+#{form @Application.postFeedback(talk.id)}
+            <table cellpadding="0" cellspacing="0" class="form">
+                <tbody>
+                <tr>
+                    <td class="label">Name</td>
+                    <td colspan="5"><input type="text" id="author" name="author"/></td>
+                </tr>
+                <tr>
+                    <td class="label">Rate The Session</td>
+                </tr>
+                <tr class="head">
+                    <td></td>
+                    <td><label>Excellent</label></td>
+                    <td><label>Good</label>
+                    </td>
+                    <td><label>Average</label>
+                    </td>
+                    <td><label>Fair</label>
+                    </td>
+                    <td><label>Poor</label>
+                    </td>
+                </tr>
+                <tr class="odd">
+                    <td class="label">Content</td>
+                    <td><input name="content" value="Excellent" id="group_2_1" type="radio"></td>
+                    <td><input name="content" value="Good" id="group_2_2" type="radio"></td>
+                    <td><input name="content" value="Average" id="group_2_3" type="radio"></td>
+                    <td><input name="content" value="Fair" id="group_2_4" type="radio"></td>
+                    <td><input name="content" value="Poor" id="group_2_5" type="radio"></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="label">Presentation Skills</td>
+                    <td><input name="skills" value="Excellent" id="group_3_1" type="radio"></td>
+                    <td><input name="skills" value="Good" id="group_3_2" type="radio"></td>
+                    <td><input name="skills" value="Average" id="group_3_3" type="radio"></td>
+                    <td><input name="skills" value="Fair" id="group_3_4" type="radio"></td>
+                    <td><input name="skills" value="Poor" id="group_3_5" type="radio"></td>
+                </tr>
+                <tr class="odd">
+                    <td class="label">Demos</td>
+                    <td><input name="demos" value="Excellent" id="group_4_1" type="radio"></td>
+                    <td><input name="demos" value="Good" id="group_4_2" type="radio"></td>
+                    <td><input name="demos" value="Average" id="group_4_3" type="radio"></td>
+                    <td><input name="demos" value="Fair" id="group_4_4" type="radio"></td>
+                    <td><input name="demos" value="Poor" id="group_4_5" type="radio"></td>
+                </tr>
+                <tr>
+                    <td class="label">Explanation</td>
+                    <td><input name="explanation" value="Excellent" id="group_5_1" type="radio"></td>
+                    <td><input name="explanation" value="Good" title="" id="group_5_2" type="radio"></td>
+                    <td><input name="explanation" value="Average" id="group_5_3" type="radio"></td>
+                    <td><input name="explanation" value="Fair" id="group_5_4" type="radio"></td>
+                    <td><input name="explanation" value="Poor" id="group_5_5" type="radio"></td>
+                </tr>
+                <tr class="odd">
+                    <td class="label">Technology Depth</td>
+                    <td><input name="depth" value="Excellent" id="group_14_1" type="radio"></td>
+                    <td><input name="depth" value="Good" id="group_14_2" type="radio"></td>
+                    <td><input name="depth" value="Average" id="group_14_3" type="radio"></td>
+                    <td><input name="depth" value="Fair" id="group_14_4" type="radio"></td>
+                    <td><input name="depth" value="Poor" id="group_14_5" type="radio"></td>
+                </tr>
+                <tr>
+                    <td class="label">Overall Rating</td>
+                    <td><input name="overall" value="Excellent	" id="group_7_1"
+                               type="radio"></td>
+                    <td><input name="overall" value="Good" id="group_7_2"
+                               type="radio"></td>
+                    <td><input name="overall" value="Average" id="group_7_3"
+                               type="radio"></td>
+                    <td><input name="overall" value="Fair" id="group_7_4"
+                               type="radio"></td>
+                    <td><input name="overall" value="Poor" id="group_7_5"
+                               type="radio"></td>
+                </tr>
+                <tr>
+                    <td class="label"><label for="comments">Comments &amp; Suggestions
+                    </label></td>
+                    <td colspan="5">
+                        <textarea name="comments" rows="8" cols="75" id="comments"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="6" align="left">
+                        <input name="submit" value="Submit" type="submit" class="submitButton">
+                    </td>
+                </tr>
+                </tbody>
+            </table>
+#{/form}
+    </div>
+</div>

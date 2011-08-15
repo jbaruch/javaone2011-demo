@@ -1,0 +1,35 @@
+#{extends 'main.html' /}
+
+<div id="templateContent" align="center">
+    #{form @authenticate()}
+        #{if flash.error}
+			<p class="error">
+				&{flash.error}
+			</p>
+		#{/if}
+		#{if flash.success}
+			<p class="success">
+				&{flash.success}
+			</p>
+		#{/if}
+        <table border="0" cellspacing="0" cellpadding="0" class="form">
+            <tr>
+                <td class="label">&{'secure.username'}</td>
+                <td>
+                    <input type="text" name="username" maxlength="50" size="18" tabindex="3" value="">
+                </td>
+            </tr>
+            <tr>
+                <td class="label">&{'secure.password'}</td>
+                <td class="element">
+                    <input type="password" name="password" maxlength="50" size="18" tabindex="4" value=""/>
+                </td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td><input type="submit" value="&{'secure.signin'}" tabindex="5" class="submitButton"/></td>
+            </tr>
+            <input type="hidden" name="remember" id="remember" value="false" />
+        </table>
+    #{/form}
+</div>

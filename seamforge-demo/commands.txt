@@ -1,0 +1,24 @@
+entity --named Talk --package javaone.seamforge.demo.domain
+field long --named code
+field string --named title
+field string --named track
+field string --named category
+cd ..
+entity --named Feedback --package javaone.seamforge.demo.domain
+field string --named author
+field custom --named content --type javaone.seamforge.demo.domain.Rating
+field custom --type javaone.seamforge.demo.domain.Rating --named skills
+field custom --type javaone.seamforge.demo.domain.Rating --named demos
+field custom --type javaone.seamforge.demo.domain.Rating --named explanation
+field custom --type javaone.seamforge.demo.domain.Rating --named depth
+field custom --type javaone.seamforge.demo.domain.Rating --named overall
+field string --named comments
+cd ..
+entity --package javaone.seamforge.demo.domain --named Speaker
+field string --named firstName
+field string --named lastName
+field string --named email
+field oneToMany --fieldType javaone.seamforge.demo.domain.Talk --named talks --inverseFieldName speaker
+cd ..
+pick-up Talk.java
+field oneToMany --fieldType javaone.seamforge.demo.domain.Feedback --named feedback --inverseFieldName  talk

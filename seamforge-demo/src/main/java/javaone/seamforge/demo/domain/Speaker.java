@@ -1,4 +1,4 @@
-package com.javaone.rad.tools.demo.entities;
+package javaone.seamforge.demo.domain;
 import javax.persistence.Entity;
 import java.io.Serializable;
 import javax.persistence.Id;
@@ -8,7 +8,7 @@ import javax.persistence.Column;
 import javax.persistence.Version;
 import java.util.Set;
 import java.util.HashSet;
-import com.javaone.rad.tools.demo.entities.Session;
+import javaone.seamforge.demo.domain.Talk;
 import javax.persistence.OneToMany;
 @Entity public class Speaker implements java.io.Serializable {
   @Id private @GeneratedValue(strategy=GenerationType.AUTO) @Column(name="id",updatable=false,nullable=false) Long id=null;
@@ -39,11 +39,18 @@ import javax.persistence.OneToMany;
   public void setLastName(  final String lastName){
     this.lastName=lastName;
   }
-  private @OneToMany(mappedBy="speaker") Set<Session> sessions=new HashSet<Session>();
-  public Set<Session> getSessions(){
-    return this.sessions;
+  @Column private String email;
+  public String getEmail(){
+    return this.email;
   }
-  public void setSessions(  final Set<Session> sessions){
-    this.sessions=sessions;
+  public void setEmail(  final String email){
+    this.email=email;
+  }
+  private @OneToMany(mappedBy="speaker") Set<Talk> talks=new HashSet<Talk>();
+  public Set<Talk> getTalks(){
+    return this.talks;
+  }
+  public void setTalks(  final Set<Talk> talks){
+    this.talks=talks;
   }
 }

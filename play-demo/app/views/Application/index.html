@@ -1,30 +1,40 @@
 #{extends 'main.html' /}
 #{set title:'Home' /}
 
-        <div id="templateContent">
+<div id="templateContent">
     <div class="fontTitle">Content Catalog</div>
     <div class="search">
+        #{ifErrors}
+            #{errors}
+            <li>${error}</li>
+            #{/errors}
+        #{/ifErrors}
+        #{form @Application.search()}
         <table>
             <tbody>
             <tr>
                 <td class="label">Search</td>
-                <td><input type="text"/></td>
+                <td><input type="text" name="searchPhrase" id="searchPhrase" value="${params.searchPhrase}"/></td>
             </tr>
             <tr>
                 <td class="label"><span>Track</span></td>
                 <td>
                     <select style="" name="track" id="track">
                         <option value="" id="profileItem_12881_select_one">-- select one --</option>
-                        <option value="59739" id="profileItem_12881_59739">Core Java Platform</option>
-                        <option value="59740" id="profileItem_12881_59740">Emerging Languages, Tools, and Techniques
+                        <option value="Core Java Platform" id="profileItem_12881_59739">Core Java Platform</option>
+                        <option value="Emerging Languages, Tools, and Techniques" id="profileItem_12881_59740">Emerging
+                            Languages, Tools, and Techniques
                         </option>
-                        <option value="59741" id="profileItem_12881_59741">Enterprise Service Architectures and the
+                        <option value="Enterprise Service Architectures and the Cloud" id="profileItem_12881_59741">
+                            Enterprise Service Architectures and the
                             Cloud
                         </option>
 
-                        <option value="59742" id="profileItem_12881_59742">Java EE Web Profile and Platform Technologies
+                        <option value="Java EE Web Profile and Platform Technologies" id="profileItem_12881_59742">Java
+                            EE Web Profile and Platform Technologies
                         </option>
-                        <option value="59743" id="profileItem_12881_59743">Java ME, Mobile, Embedded, and Devices
+                        <option value="Java ME, Mobile, Embedded, and Devices" id="profileItem_12881_59743">Java ME,
+                            Mobile, Embedded, and Devices
                         </option>
                         <option value="59744" id="profileItem_12881_59744">Java SE, Client Side Technologies, and Rich
                             User
@@ -38,18 +48,19 @@
                 <td class="label"><span>Category </span></td>
                 <td><select style="" name="category" id="category">
                     <option value="" id="profileItem_12301_select_one">-- select one --</option>
-                    <option value="37627" id="profileItem_12301_37627">Best Practices</option>
-                    <option value="37628" id="profileItem_12301_37628">Case Study</option>
-                    <option value="37629" id="profileItem_12301_37629">Open Source Standards</option>
-                    <option value="37630" id="profileItem_12301_37630">Strategy/Roadmap</option>
+                    <option value="Best Practices" id="profileItem_12301_37627">Best Practices</option>
+                    <option value="Case Study" id="profileItem_12301_37628">Case Study</option>
+                    <option value="Open Source Standards" id="profileItem_12301_37629">Open Source Standards</option>
+                    <option value="Strategy/Roadmap" id="profileItem_12301_37630">Strategy/Roadmap</option>
                 </select></td>
             </tr>
             </tbody>
         </table>
         <div class="searchButtons">
             <input id="clearSearch" class="searchButton" type="button" value="Clear">
-            <input id="startSearch" class="searchButton" type="button" value="Search">
+            <input id="startSearch" class="searchButton" type="submit" value="Search">
         </div>
+        #{/form}
     </div>
 
     <div>
@@ -66,14 +77,14 @@
             </thead>
             <tbody>
             #{list items:talks, as:'talk'}
-                <tr class="odd">
-                    <td><a href="@{Application.feedback(talk.id)}">${talk.code}</a></td>
-                    <td class="title">${talk.title}</td>
-                    <td>${talk.track}</td>
-                    <td>${talk.category}</td>
-                    <td>${talk.speaker}</td>
-                    <td></td>
-                </tr>
+            <tr class="odd">
+                <td><a href="@{Application.feedback(talk.id)}">${talk.code}</a></td>
+                <td class="title">${talk.title}</td>
+                <td>${talk.track}</td>
+                <td>${talk.category}</td>
+                <td>${talk.speaker}</td>
+                <td></td>
+            </tr>
             #{/list}
             </tbody>
         </table>

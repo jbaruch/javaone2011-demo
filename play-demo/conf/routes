@@ -18,5 +18,10 @@ GET     /feedback/{talkId}                      Application.feedback
 
 POST    /feedback/{talkId}/comments             Application.postFeedback
 
+POST    /search                                 Application.search
+
 # Catch all
 *       /{controller}/{action}                  {controller}.{action}
+
+# Import CRUD routes
+*      /admin              module:crud

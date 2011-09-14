@@ -1,6 +1,8 @@
 package models;
 
 import play.db.jpa.Model;
+import play.modules.search.Field;
+import play.modules.search.Indexed;
 
 import javax.persistence.Entity;
 import javax.persistence.ManyToOne;
@@ -16,9 +18,11 @@ import java.util.List;
  *
  * @author Dror Bereznitsky
  */
+@Indexed
 @Entity
 public class Talk extends Model {
     public Long code;
+    @Field
     public String title;
     public String track;
     public String category;

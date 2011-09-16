@@ -2,3 +2,7 @@
 
 require:
     - play
+    - play -> search head
+    - play -> crud
+    - play -> maven head
+    - play -> secure
